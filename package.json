@@ -1,5 +1,4 @@
 {
-    "private": true,
     "name": "@dragee-io/type",
     "type": "module",
     "scripts": {

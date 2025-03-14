@@ -91,8 +91,9 @@ export const findRules = (namespace: string, dir: string): Rule[] => {
 export function findRule(namespace: string, dir: string, ruleName: string): Rule | undefined {
     const files = scanRuleFiles(dir);
 
-    // Might be improved in case of multiple rules containing the same name
-    const file = Array.from(files).find(file => file.includes(ruleName));
+    const file = Array.from(files).find((file) =>
+      file.includes(`/${ruleName}`)
+    );
 
     if (!file) {
         return undefined;

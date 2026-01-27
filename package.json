@@ -11,11 +11,26 @@
         "build:force": "rm -rf ./dist && bun run build.ts"
     },
     "exports": {
-        "./asserter": "./src/asserter/index.ts",
-        "./profiler": "./src/profiler/index.ts",
-        "./grapher": "./src/grapher/index.ts",
-        "./common": "./src/common/index.ts",
-        "./test-utils": "./src/test-utils/index.ts",
+        "./asserter": {
+            "bun": "./src/asserter/index.ts",
+            "import": "./dist/asserter/index.js"
+        },
+        "./profiler": {
+            "bun": "./src/profiler/index.ts",
+            "import": "./dist/profiler/index.js"
+        },
+        "./grapher": {
+            "bun": "./src/grapher/index.ts",
+            "import": "./dist/grapher/index.js"
+        },
+        "./common": {
+            "bun": "./src/common/index.ts",
+            "import": "./dist/common/index.js"
+        },
+        "./test-utils": {
+            "bun": "./src/test-utils/index.ts",
+            "import": "./dist/test-utils/index.js"
+        },
         "./tsconfig.bun": "./tsconfig.bun.json"
     },
     "trustedDependencies": ["@biomejs/biome"],

@@ -8,15 +8,19 @@ jobs:
   publish:
     name: Publishing the package
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write   # ← nécessaire pour npm Trusted Publishing
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Dagger
         uses: dagger/dagger-for-github@v6
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
-          version: "latest" # Specify the Dagger version to use. It's recommanded to stay in sync with the latest.
+          version: "latest"
           verb: call
           module: github.com/fixentropy-io/daggerverse
-          args: on-publish --npm-token=env:NPM_TOKEN --source=. --git-url ${{ github.server_url }}/${{ github.repository }}
+          args: on-publish --source=. --git-url ${{ github.server_url }}/${{ github.repository }}

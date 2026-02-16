@@ -1,23 +1,23 @@
-# dragee-model
+# fixentropy-model
 
-Define types and helpers for Dragee projects.
+Define types and helpers for Fixentropy projects.
 
-### @dragee-io/type
+### @fixentropy-io/type
 
-Common types for Dragees.
+Common types for Fixentropy.
 
-### @dragee-io/asserter-type
+### @fixentropy-io/asserter-type
 
 Types and helpers for Asserters.
 
-### @dragee-io/grapher-type
+### @fixentropy-io/grapher-type
 
 Types and helpers for Graphers.
 
-### @dragee-io/tests-utils
+### @fixentropy-io/tests-utils
 
 Utils for asserters/graphers approval testing.
 
-### @dragee-io/profiler
+### @fixentropy-io/profiler
 
 Profiler for asserters/graphers.

@@ -17,5 +17,5 @@ jobs:
         with:
           version: "latest" # Specify the Dagger version to use. It's recommanded to stay in sync with the latest.
           verb: call
-          module: github.com/dragee-io/daggerverse
+          module: github.com/fixentropy-io/daggerverse
           args: on-pull-request --url ${{ github.server_url }}/${{ github.repository }} --branch ${{ github.head_ref }}

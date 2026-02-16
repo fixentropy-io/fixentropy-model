@@ -24,7 +24,7 @@ Basically because the runtime engines on which the code is executed are differen
 
 ## How to use it
 
-In your package that uses the `@dragee-io/type` package, you must specify in the tsconfig.json file the following:
+In your package that uses the `@fixentropy-io/type` package, you must specify in the tsconfig.json file the following:
 
 ```json
 {
@@ -44,7 +44,7 @@ by extending the tsconfig.json file of the package:
 
 ```json
 {
-    "extends": "@dragee-io/type/tsconfig.bun",
+    "extends": "@fixentropy-io/type/tsconfig.bun",
 }
 ```
 
@@ -55,7 +55,7 @@ This is required to inform typescript that it must resolve the typescript files 
 You can then import the package in your code like this:
 
 ```ts
-import type { Dragee } from '@dragee-io/type/common'; // '@dragee-io/type/<export-name>'
+import type { Dragee } from '@fixentropy-io/type/common'; // '@fixentropy-io/type/<export-name>'
 
 const dragees: Dragee[] = [];
 ```

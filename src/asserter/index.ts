@@ -1,5 +1,6 @@
 import { Glob } from 'bun';
 import { type Dragee, generateId } from '../common';
+import { basename } from 'node:path';
 
 export type ReportStats = {
     rulesCount: number;
@@ -92,7 +93,7 @@ export function findRule(namespace: string, dir: string, ruleName: string): Rule
     const files = scanRuleFiles(dir);
 
     const file = Array.from(files).find((file) =>
-      file.includes(`/${ruleName}`)
+      basename(file) === `${ruleName}.rule.ts`
     );
 
     if (!file) {
